@@ -1,0 +1,139 @@
+
+body{
+    background: -o-linear-gradient(white, #212121);
+}
+.fa-solid, .fas {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    white-space: nowrap;
+ 
+}
+.container-fluid {
+    width: 100%;
+    white-space: nowrap;
+    
+  }
+
+
+#SLbuttons{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.mainContent{
+    width: 100%;
+    
+}
+.back{
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+
+
+.bg1 {
+    /* The image used */
+   
+  
+    /* Full height */
+    height: 60%;
+    width: 40%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .bg2 {
+    /* The image used */
+   
+  
+    /* Full height */
+    height: 100%;
+    width: 60%;
+  
+    /* Center and scale the image nicely */
+    background: position 80px;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+.transparency{
+    transform: translate();
+transition: 1sec;
+
+position: relative;
+height: 91.5vh;
+width: 100vw;
+background-color: black;
+opacity: 0.80;
+}
+
+
+
+
+
+
+
+
+
+
+.box{
+    display: flex;
+    width: 100vw;
+    height: 45%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box .fa-solid{
+color: white;
+font-size: 150px;
+}
+
+.placement_name{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 100px;
+    color: white ;
+    margin-left: 30px;
+    font-weight:500 ;
+    opacity: 1;
+   
+}
+
+.subtitle{
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-left: 30px; 
+    opacity: 1; 
+}
+
+h4{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 35px;
+    color: white;
+    font-size: x-large;
+    margin-left: 30px; 
+    opacity: 1;
+}
+
+
+.btn{
+    margin-left: 30px;
+}
+

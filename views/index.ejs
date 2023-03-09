@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Mulish:wght@200;1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--Navigation bar start-->
+
+
+    <div class="container">
+        <% if (!locals.user) { %>
+            
+            <header class="d-flex justify-content-spacebetween py-3">
+            
+                <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <i class="fa-solid fa-suitcase" width="80" height="72" role="img" aria-label="Placement"></i>
+                    
+                </a>
+                 
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link" >Home</a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link">Placements</a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link">Companies</a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link">Students</a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link">About</a></li>
+                </ul>        
+              <div class="col-md-3 text-end" id="SLbuttons">
+                
+                <a href="/login"><button type="button"  class="btn btn-outline-primary me-2">Login</button></a>
+                <a href="/sign-up"><button type="button"  class="btn btn-primary ms-auto">Sign-up</button></a>
+                
+               
+              </div>
+    
+            </header>
+        </div>
+         <!--Navigation bar end-->
+    
+          
+    
+        <div class="mainContent">
+            <div class="back">
+                <img class="bg1" src="/img/b1.jpg" alt="">
+                <img class="bg2" src="/img/b3.jpg" alt="">
+            </div>
+            <div class="transparency">
+                <br> <br> <br> <br> <br>
+                <p class="placement_name"> Placement Cell</p>
+                
+                <p class="subtitle">You need to be logged in to continue </p>
+        
+                
+    
+                <a href="/login"><button type="button"  class="btn btn-outline-primary me-2">Login</button></a>
+            </div>
+        </div>
+            
+            <% } else { %>
+
+
+            <%- include('header'); %>
+        </div>
+         <!--Navigation bar end-->
+    
+          
+    
+        <div class="mainContent">
+            <div class="back">
+                <img class="bg1" src="/img/b1.jpg" alt="">
+                <img class="bg2" src="/img/b3.jpg" alt="">
+            </div>
+            <div class="transparency">
+                <br> <br> <br> <br> <br>
+                <p class="placement_name"> Placement Cell</p>
+                <span>
+                    <p class="subtitle">Welcome to placement cell ! </p>
+                    <h4><%= user.username %></h3>
+                </span>
+                
+
+            </div>
+        </div>
+        
+            <% }  %>
+
+
+
+
+
+            
+
+   
+
+
+
+
+    <script src="https://kit.fontawesome.com/f72372325e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    
+</body>
+</html>

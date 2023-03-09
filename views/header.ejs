@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/allstyles.css">
+<header>
+  <nav class="navbar navbar-expand-lg" style="background-color: white">
+    <div class="container-fluid">
+      <a class="navbar-brand h1" href="/dashboard">
+        <i class="fa-solid fa-suitcase"></i></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-around "
+        id="navbarSupportedContent"
+      >
+        <% if (locals.user) {%>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav1-link " href="/dashboard">My Page</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav1-link" aria-current="page" href="/student/add-student"
+              >Add new Student</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav1-link" href="/interview/add-interview"
+              >Companies</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav1-link" href="/download">Get Reports</a>
+          </li>
+        </ul>
+
+        <form >
+          <a class="btn btn-outline-primary me-2" href="/profile">
+            <i class="fa-regular fa-user"></i>
+            <%= user.username %></a
+          >
+          <a class="btn btn-primary ms-auto" href="/sign-out">Sign Out</a>
+        </form>
+
+        <%} %>
+      </div>
+    </div>
+  </nav>
+</header>
