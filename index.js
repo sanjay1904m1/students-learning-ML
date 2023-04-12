@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(expressLayouts);
 
 // set up view engine
-app.set("view engine", "ejs");
 app.set("views", "./views");
+app.set("view engine", "ejs");
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/img', express.static(__dirname + 'public/img'));
@@ -60,8 +60,32 @@ app.use(customMware.setFlash);
 app.get("", (req, res)=>{
   res.render("index")
 })
+app.get("/dashboard", (req, res)=>{
+  res.render('dashboard')
+});
 
-// use express router
+app.get("/course", (req, res)=>{
+  res.render('course')
+});
+
+const arr={
+  "1.1": "https://www.youtube.com/embed/ukzFI9rgwfU?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+  "2.1": "https://www.youtube.com/embed/RmajweUFKvM?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+  "2.2": "https://www.youtube.com/embed/l3dZ6ZNFjo0?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+  "2.3": "https://www.youtube.com/embed/I7NrVwm3apg?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+  "3.1": "https://www.youtube.com/embed/-DEL6SVRPw0?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+  "4.1": "https://www.youtube.com/embed/ukzFI9rgwfU?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy",
+}
+
+app.get("/videoplayer", (req, res)=>{
+  const name = req.query.name;
+  
+  const link=arr[name]
+  res.render('videoplayer',{ name :link } )
+});
+
+
+// use express router (User Authentication)
 app.use("/", require("./routes"));
 
 app.listen(PORT || 5000, (err) => {
